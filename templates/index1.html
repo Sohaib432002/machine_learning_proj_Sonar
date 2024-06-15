@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONAR PROJECT | ML PREDICTION</title>
+</head>
+<style>
+
+        
+    
+body{background-attachment: fixed;background-color: antiquewhite;background-image:url('https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_752822_1688543657634257.jpg') ;background-repeat: no-repeat;background-size: cover}
+.img1 img{width: 70px;height: 73px;}
+.txt1{color: red;font-size: 11px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;}
+.im2 img{width: 70px;height: 73px;}
+.input_values{display:flex;margin: 48px;flex-wrap: nowrap;}
+.input_values input{display: flex;justify-content: center;text-align: center;margin: 10px;padding: 10px;}
+.btn{display: flex;justify-content: center;text-align: center;}
+.btn button{ padding: 8px;display: flex;justify-content: center;text-align: center;font-size: 26px;font-family: fangsong;transition: white  5s;}
+.btn button:hover{background-color: black;color: white; cursor: pointer;transition: white  5s;}
+@media (min-width: 500px) and (max-width: 2000px) {
+  .input_values{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .header1 {
+    display: flex;
+  justify-content: space-between;;
+    text-align: center;
+  }
+  .txt1{
+    font-size: 16px;
+  }
+  .img1 img{
+    width: 87px;
+    height: 75px;
+    margin: 9px;
+  }
+  .img2 img{
+    width: 87px;
+    height: 75px;
+    margin: 9px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 365px) {
+  .txt1 {
+    font-size: 11px;
+  }
+  }
+
+/* For devices with width 0px to 365px */
+@media (min-width: 0px) and (max-width: 500px) {
+  .txt1 {
+    font-size: 11px;
+  }
+  .header1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .input_values {
+    margin: 48px auto; /* Center the input values */
+    flex-wrap: wrap; /* Allow inputs to wrap to the next line */
+    max-width: 80%; /* Limit the width of the inputs */
+  }
+  .input_values input {
+    width: calc(50% - 20px); /* Set the width of each input, considering margin */
+    margin: 10px; /* Adjust margin between inputs */
+    box-sizing: border-box; /* Ensure input width includes padding and border */
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+</style>
+<body>
+    <div class="header1">
+        <div class="img1">
+            <img src="https://namal.edu.pk/uploads/logo4980416.png" alt="error">
+        </div>
+    <div class="txt1">
+        <h1>SONAR PROJECT | ML PREDICTION</h1>
+    </div>
+    <div class="im2">
+        <img src="https://thumbs.dreamstime.com/b/black-radar-targets-monitor-searching-icon-isolated-white-background-search-system-navy-sonar-yellow-speech-bubble-232103786.jpg" alt="error">
+    </div>
+    </div>
+    <div class="from">
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="input_values">
+            <input type="number" name="value1" id="value1" placeholder="Value 1" required="required" step="any">
+            <input type="number" name="value2" id value="value2" placeholder="Value 2" required="required"step="any">
+            <input type="number" name="value3" id="value3" placeholder="Value 3" required="required"step="any">
+            <input type="number" name="value4" id="value4" placeholder="Value 4" required="required"step="any">
+            <input type="number" name="value5" id="value5" placeholder="Value 5" required="required"step="any">
+            <input type="number" name="value6" id="value6" placeholder="Value 6" required="required"step="any">
+            <input type="number" name="value7" id="value7" placeholder="Value 7" required="required"step="any">
+            <input type="number" name="value8" id="value8" placeholder="Value 8" required="required"step="any">
+            <input type="number" name="value9" id="value9" placeholder="Value 9" required="required"step="any">
+            <input type="number" name="value10" id="value10" placeholder="Value 10" required="required"step="any">
+            <input type="number" name="value11" id="value11" placeholder="Value 11" required="required"step="any">
+            <input type="number" name="value12" id="value12" placeholder="Value 12" required="required"step="any">
+            <input type="number" name="value13" id="value13" placeholder="Value 13" required="required"step="any">
+            <input type="number" name="value14" id="value14" placeholder="Value 14" required="required"step="any">
+            <input type="number" name="value15" id="value15" placeholder="Value 15" required="required"step="any">
+            <input type="number" name="value16" id="value16" placeholder="Value 16" required="required"step="any">
+            <input type="number" name="value17" id="value17" placeholder="Value 17" required="required"step="any">
+            <input type="number" name="value18" id="value18" placeholder="Value 18" required="required"step="any">
+            <input type="number" name="value19" id="value19" placeholder="Value 19" required="required"step="any">
+            <input type="number" name="value20" id="value20" placeholder="Value 20" required="required"step="any">
+            <input type="number" name="value21" id="value21" placeholder="Value 21" required="required"step="any">
+            <input type="number" name="value22" id="value22" placeholder="Value 22" required="required"step="any">
+            <input type="number" name="value23" id="value23" placeholder="Value 23" required="required"step="any">
+            <input type="number" name="value24" id="value24" placeholder="Value 24" required="required"step="any">
+            <input type="number" name="value25" id="value25" placeholder="Value 25" required="required"step="any">
+            <input type="number" name="value26" id="value26" placeholder="Value 26" required="required"step="any">
+            <input type="number" name="value27" id="value27" placeholder="Value 27" required="required"step="any">
+            <input type="number" name="value28" id="value28" placeholder="Value 28" required="required"step="any">
+            <input type="number" name="value29" id="value29" placeholder="Value 29" required="required"step="any">
+            <input type="number" name="value30" id="value30" placeholder="Value 30" required="required"step="any">
+            <input type="number" name="value31" id="value31" placeholder="Value 31" required="required"step="any">
+            <input type="number" name="value32" id="value32" placeholder="Value 32" required="required"step="any">
+            <input type="number" name="value33" id="value33" placeholder="Value 33" required="required"step="any">
+            <input type="number" name="value34" id="value34" placeholder="Value 34" required="required"step="any">
+            <input type="number" name="value35" id="value35" placeholder="Value 35" required="required"step="any">
+            <input type="number" name="value36" id="value36" placeholder="Value 36" required="required"step="any">
+            <input type="number" name="value37" id="value37" placeholder="Value 37" required="required"step="any">
+            <input type="number" name="value38" id="value38" placeholder="Value 38" required="required"step="any">
+            <input type="number" name="value39" id="value39" placeholder="Value 39" required="required"step="any">
+            <input type="number" name="value40" id="value40" placeholder="Value 40" required="required"step="any">
+            <input type="number" name="value41" id="value41" placeholder="Value 41" required="required"step="any">
+            <input type="number" name="value42" id="value42" placeholder="Value 42" required="required"step="any">
+            <input type="number" name="value43" id="value43" placeholder="Value 43" required="required"step="any">
+            <input type="number" name="value44" id="value44" placeholder="Value 44" required="required"step="any">
+            <input type="number" name="value45" id="value45" placeholder="Value 45" required="required"step="any">
+            <input type="number" name="value46" id="value46" placeholder="Value 46" required="required"step="any">
+            <input type="number" name="value47" id="value47" placeholder="Value 47" required="required"step="any">
+            <input type="number" name="value48" id="value48" placeholder="Value 48" required="required"step="any">
+            <input type="number" name="value48" id="value48" placeholder="Value 48" required="required"step="any">
+            <input type="number" name="value48" id="value48" placeholder="Value 48" required="required"step="any">
+            <input type="number" name="value49" id="value49" placeholder="Value 49" required="required"step="any">
+            <input type="number" name="value50" id="value50" placeholder="Value 50" required="required"step="any">
+            <input type="number" name="value51" id="value51" placeholder="Value 51" required="required"step="any">
+            <input type="number" name="value52" id="value52" placeholder="Value 52" required="required"step="any">
+            <input type="number" name="value53" id="value53" placeholder="Value 53" required="required"step="any">
+            <input type="number" name="value54" id="value54" placeholder="Value 54" required="required"step="any">
+            <input type="number" name="value55" id="value55" placeholder="Value 55" required="required"step="any">
+            <input type="number" name="value56" id="value56" placeholder="Value 56" required="required"step="any">
+            <input type="number" name="value57" id="value57" placeholder="Value 57" required="required"step="any">
+            <input type="number" name="value58" id="value58" placeholder="Value 58" required="required"step="any">
+            <input type="number" name="value59" id="value59" placeholder="Value 59" required="required"step="any">
+            <input type="number" name="value60" id="value59" placeholder="Value 59" required="required"step="any">
+        </div>
+        <div class="btn">
+            <button type="submit">Predict</button>
+        </div>    
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONAR PROJECT | ML PREDICTION</title>
+</head>
+<style>
+
+        
+    
+body{background-attachment: fixed;background-color: antiquewhite;background-image:url('https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_752822_1688543657634257.jpg') ;background-repeat: no-repeat;background-size: cover}
+.img1 img{width: 70px;height: 73px;}
+.txt1{color: red;font-size: 11px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;}
+.im2 img{width: 70px;height: 73px;}
+.predicted_values{display:flex;justify-content: center;text-align: center;flex-direction: column;}
+.img3{display: flex;justify-content: center;text-align: center;}
+.img3 img{width: 335px;border-radius: 96px;margin: 47px;}
+.predicted_values p{    color: wheat; font-size: 77px;}
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+	#footer{
+	background: blue;
+    padding: 3rem;
+	/* padding-top: 5rem; */
+	padding-top: 7rem;
+    padding-bottom: 80px;;
+}
+#footer2{
+	background: blue;
+    padding: 3rem;
+    margin-top: 0px;
+	/* padding-top: 5rem; */
+	padding-top: 7rem;
+    padding-bottom: 80px;
+	background-image: url();
+}
+
+.social-links h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.social-links img{
+	padding-bottom: 25px;
+}
+.social-icons{
+	/* display: flex;
+    gap: 3rem; */
+	display: flex;
+    flex-direction: column;
+    gap: 1rem;
+	color: #777777;
+}
+.social-icons a{
+	/* font-size: 18px; */
+    /* background: #ffffff; */
+    /* box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+	color: #82074a; */
+	/* margin-right: 18px; */
+	color: #777777;
+}
+.social-icons a:hover{
+	color: #000;
+}
+.col-md-3{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    width: 438px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.col-md-3 img{
+    width: 320px;
+}
+.social-icons a i{
+	box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+    color: #82074a;
+	font-size: 16px;
+	margin-right: 12px;
+}
+li{
+	list-style: none;
+}
+.useful-link h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.useful-link img{
+	padding-bottom: 15px;
+}
+.use-links{
+	line-height: 32px;
+}
+.use-links li i{
+	font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+}
+.use-links li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+	
+}
+.use-links li a:hover{
+	color: #000;
+}
+.address1 li a{color: white;}
+.address h2{
+	padding-bottom: 15px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.address img{
+	padding-bottom: 15px;
+}
+.address-links li a{
+	color: white;
+    font-size: 15px;
+    font-weight: 500;
+	color: white;
+
+}
+.address-links li i{
+	font-size: 16px;
+    padding-right: 8px;
+	color: #82074a;
+
+}
+.address-links li i:nth-child(1){
+	padding-top: 9px;
+}
+.address-links .address1{
+	font-weight: 500;
+    font-size: 15px;
+	display: flex;
+}
+.address-links{
+	    line-height: 32px;
+		color: #777777;
+}
+.copy-right-sec{
+	padding: 1.8rem;
+    background: #82074a;
+    color: #fff;
+    text-align: center;
+}
+.copy-right-sec a{
+	color: #fcd462;
+    font-weight: 500;
+}
+a{
+  text-decoration:none;
+}
+.row{    display: flex;
+    flex-wrap: wrap;}
+@media (min-width: 500px) and (max-width: 2000px) {
+  .input_values{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .header1 {
+    display: flex;
+  justify-content: space-between;;
+    text-align: center;
+  }
+  .txt1{
+    font-size: 16px;
+  }
+  .img1 img{
+    width: 87px;
+    height: 75px;
+    margin: 9px;
+  }
+  .im2 img{
+    width: 87px;
+    height: 75px;
+    margin: 9px;
+  }
+  .img3 img{width: 295px;border-radius: 96px;margin: 47px;}
+.predicted_values p{    color: wheat; font-size: 50px;}
+}
+.row{display: flex;}
+.address1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: wheat;
+}
+@media (min-width: 0px) and (max-width: 365px) {
+  .txt1 {
+    font-size: 11px;
+  }
+  }
+
+/* For devices with width 0px to 365px */
+@media (min-width: 0px) and (max-width: 500px) {
+  .txt1 {
+    font-size: 11px;
+  }
+  .header1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .img3 img{width: 200px;border-radius: 96px;margin: 30px;}
+  .predicted_values p{    color: wheat; font-size: 30px;}
+  
+}
+
+</style>
+<body>
+    <div class="header1">
+        <div class="img1">
+            <img src="https://namal.edu.pk/uploads/logo4980416.png" alt="error">
+        </div>
+    <div class="txt1">
+        <h1>SONAR PROJECT | ML PREDICTION</h1>
+    </div>
+    <div class="im2">
+        <img src="https://thumbs.dreamstime.com/b/black-radar-targets-monitor-searching-icon-isolated-white-background-search-system-navy-sonar-yellow-speech-bubble-232103786.jpg" alt="error">
+    </div>
+    </div>
+
+    <div class="predicted_values">
+        <p>This is the <span style="color: yellow;" >Mine</span></p>
+        <div class="img3">
+        <img src="https://www.shutterstock.com/image-photo/natural-rough-diamond-rock-close-600nw-2331054135.jpg" alt="error">
+        
+    </div>
+    <p>Thank you so much for Using Our service</p>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="index.html"><img src="https://namal.edu.pk/uploads/logo22869383.png" alt="" class="img-fluid logo-footer"></a>
+                  <div class="footer-about">
+                      <p>Namal University sits on a total of 1000 acres in Pakistan's Salt Range in an area comprising of hills and crags overlooking Namal Lake in Mianwali District. The Salt Range is a hill system in the Punjab province of Pakistan deriving its name from its extensive deposits of rock salt.</p>
+                  </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="social-links">
+                        <h2>Follow Us</h2>
+                        <img src="./assets/images/about/home_line.png" alt="">
+                        <div class="social-icons">
+                            <li><a href="https://www.facebook.com/profile.php?id=100071371093782"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="https://www.instagram.com/sohaib432002/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="www.linkedin.com/in/muhammad-sohaib-maqsood-72b785244"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                        </div>
+                    </div>
+                
+
+                </div>
+                <div class="col-md-3">
+                    <div class="address">
+                        <h2>Address</h2>
+                        <div class="address-links">
+                            <li class="address1"><i class="fa-solid fa-location-dot"></i> Near PAF colony <br> Mianwali</li>
+                               <li><a href=""><i class="fa-solid fa-phone"></i> +92 3191057875</a></li>
+                               <li><a href=""><i class="fa-solid fa-envelope"></i>sohaibmaqsoodsohaibmaqsood@gmail.com</a></li>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer section end -->
+    <!-- footer copy right section start -->
+    <section id="copy-right">
+        <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+            2024 Copyright © All Right Reserved|<a href="https://namal.edu.pk/">Namal University</a> 
+
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
